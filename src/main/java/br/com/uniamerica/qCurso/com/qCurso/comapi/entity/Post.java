@@ -10,7 +10,7 @@ import org.hibernate.annotations.OnDeleteAction;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "td_posts", schema = "qcurso")
+@Table(name = "tb_posts", schema = "qcurso")
 @NoArgsConstructor
 public class Post extends AbstractEntity {
 
@@ -38,5 +38,4 @@ public class Post extends AbstractEntity {
     @Enumerated(EnumType.STRING)
     @Column(name = "tipo", nullable = false, length = 30)
     private Tipo tipo;
-
 }

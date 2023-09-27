@@ -14,7 +14,7 @@ import java.util.Optional;
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
-	@Query(value = "select * from qcurso.td_usuarios where id = :id", nativeQuery = true)
+	@Query(value = "select * from qcurso.tb_usuarios where id = :id", nativeQuery = true)
 	public Optional<Usuario> findById(@Param("id") final Long id);
 	@Query("SELECT usuario FROM Usuario usuario WHERE usuario.ativo = true")
 	public List<Usuario> findByUsuariosAtivos();
@@ -36,10 +36,4 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
 	@Query("from Usuario where genero = :genero")
 	public List<Usuario> findByGenero(@Param("genero") Genero genero);
-
-
-
 }
-
-
-

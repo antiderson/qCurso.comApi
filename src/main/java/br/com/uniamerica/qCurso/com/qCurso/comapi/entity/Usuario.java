@@ -11,9 +11,17 @@ import java.util.List;
 
 
 @Entity
-@Table(name = "td_usuarios", schema = "qcurso")
+@Table(name = "tb_usuario", schema = "qcurso")
 @NoArgsConstructor
 public class Usuario extends AbstractEntity {
+
+	@Getter @Setter
+	@Column(name = "login", nullable = false, length = 25, unique = true)
+	private String login;
+
+	@Getter @Setter
+	@Column(name = "senha", nullable = false, length = 25)
+	private String senha;
 
 	@Getter @Setter
 	@Column(name = "nome", nullable = false, length = 30, unique = true)
@@ -44,6 +52,4 @@ public class Usuario extends AbstractEntity {
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
 	@JsonManagedReference
 	private List<Post> posts;
-
-
 }

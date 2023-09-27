@@ -12,7 +12,7 @@ import java.util.Optional;
 @Repository
 public interface PostRepository extends JpaRepository<Post, Long> {
 
-    @Query(value = "select * from qcurso.td_posts where id = :id", nativeQuery = true)
+    @Query(value = "select * from qcurso.tb_posts where id = :id", nativeQuery = true)
     public Optional<Post> findById(@Param("id") final Long id);
 
     @Query("SELECT post FROM Post post WHERE post.ativo = true")

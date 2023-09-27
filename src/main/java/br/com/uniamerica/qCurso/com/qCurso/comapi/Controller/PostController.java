@@ -34,7 +34,7 @@ public class PostController {
     @PostMapping
     public ResponseEntity<?> cadastrar(@RequestBody final Post post){
         this.postRepository.save(post);
-        return ResponseEntity.ok().body("Registro cadastrado com sucesso");
+        return ResponseEntity.ok().body("Postagem cadastrado com sucesso");
     }
 
     @PutMapping("/atualizarGeral/{id}")
@@ -47,7 +47,7 @@ public class PostController {
         }catch (Exception e){
             return ResponseEntity.badRequest().body(e.getMessage());
         }
-        return ResponseEntity.ok().body("Registro atualizado com sucesso");
+        return ResponseEntity.ok().body("Postagem atualizada com sucesso");
     }
 
     @DeleteMapping("/{id}")
@@ -59,7 +59,6 @@ public class PostController {
         }catch (Exception e){
             return ResponseEntity.badRequest().body(e.getMessage());
         }
-        return ResponseEntity.ok().body("Registro deletado com sucesso");
+        return ResponseEntity.ok().body("Postagem deletado com sucesso");
     }
-
 }

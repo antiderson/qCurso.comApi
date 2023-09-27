@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/usuarios")
 public class UsuarioController {
 
-
 	@Autowired
 	public UsuarioRepository usuarioRepository;
 
@@ -34,7 +33,7 @@ public class UsuarioController {
 	@PostMapping
 	public ResponseEntity<?> cadastrar(@RequestBody final Usuario usuario){
 		this.usuarioRepository.save(usuario);
-		return ResponseEntity.ok().body("Registro cadastrado com sucesso");
+		return ResponseEntity.ok().body("Usuário cadastrado com sucesso");
 	}
 
 	@PutMapping("/atualizarGeral/{id}")
@@ -47,7 +46,7 @@ public class UsuarioController {
 		}catch (Exception e){
 			return ResponseEntity.badRequest().body(e.getMessage());
 		}
-		return ResponseEntity.ok().body("Registro atualizado com sucesso");
+		return ResponseEntity.ok().body("Usuário atualizado com sucesso");
 	}
 
 	@DeleteMapping("/{id}")
@@ -59,7 +58,6 @@ public class UsuarioController {
 		}catch (Exception e){
 			return ResponseEntity.badRequest().body(e.getMessage());
 		}
-		return ResponseEntity.ok().body("Registro deletado com sucesso");
+		return ResponseEntity.ok().body("Usuário deletado com sucesso");
 	}
-
 }
