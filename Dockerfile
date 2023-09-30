@@ -1,19 +1,11 @@
-# Definição de build para a imagem do Spring boot
-FROM openjdk:20 as build
+# Estágio 1: Construir o projeto Maven
+FROM maven:3.6.3-jdk-11 AS build
+WORKDIR /root/
+COPY . .
+RUN mvn package
 
-WORKDIR /app
-
-COPY mvnw .
-COPY pom.xml .
-
-RUN chmod +x ./mvnw
-
-COPY src src
-
-
-FROM openjdk:20 as production
-ARG DEPENDENCY=/app/target/dependency
-
-
-# Rodar a aplicação Spring boot
-ENTRYPOINT ["java", "-cp", "app:app/lib/*","br.com.uniamerica.qCurso.com.qCurso.comapi"]
+# Estágio 2: Criar a imagem final com o Amazon Corretto 20
+FROM amazoncorretto:20
+WORKDIR /var/www/app/
+COPY --from=build /root/target/projetos.jar .
+CMD ["java", "-jar", "projetos.jar"]
