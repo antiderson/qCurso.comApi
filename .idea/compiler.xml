@@ -10,6 +10,9 @@
         <module name="qCurso.com-api" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="qCurso.comApi" target="18" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

@@ -1,19 +1,11 @@
-# Definição de build para a imagem do Spring boot
-FROM openjdk:20 as build
+# Use a imagem base do OpenJDK 11
+FROM openjdk:11-jre-slim
 
-WORKDIR /app
+# Copie o arquivo JAR da sua aplicação para o contêiner
+COPY target/qCurso.com-api-0.0.1-SNAPSHOT.jar /qCurso.com-api-0.0.1-SNAPSHOT.jar
 
-COPY mvnw .
-COPY pom.xml .
+# Exponha a porta em que a aplicação Spring Boot irá ouvir
+EXPOSE 8080
 
-RUN chmod +x ./mvnw
-
-COPY src src
-
-
-FROM openjdk:20 as production
-ARG DEPENDENCY=/app/target/dependency
-
-
-# Rodar a aplicação Spring boot
-ENTRYPOINT ["java", "-cp", "app:app/lib/*","br.com.uniamerica.qCurso.com.qCurso.comapi"]
+# Comando para iniciar a aplicação quando o contêiner for iniciado
+CMD ["java", "-jar", "qCurso.com-api-0.0.1-SNAPSHOT.jar"]
