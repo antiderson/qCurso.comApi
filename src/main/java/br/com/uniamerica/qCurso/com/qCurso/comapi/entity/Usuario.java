@@ -1,5 +1,6 @@
 package br.com.uniamerica.qCurso.com.qCurso.comapi.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -40,6 +41,7 @@ public class Usuario extends AbstractEntity {
 	private String email;
 
 	@Getter @Setter
+	@JsonFormat(pattern = "yyyy-MM-dd")
 	@Column(name = "dataNascimento", nullable = true)
 	private LocalDate dataNascimento;
 
