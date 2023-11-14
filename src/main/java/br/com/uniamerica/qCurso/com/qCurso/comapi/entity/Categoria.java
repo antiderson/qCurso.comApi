@@ -7,5 +7,10 @@ public enum Categoria {
     HTMLCSS,
     BANCODEDADOS,
     REACT,
-    REACTNATIVE;
+    REACTNATIVE,
+    NODE,
+    ARDUINO,
+    ANGULAR,
+    VUEJS,
+    OUTRO
 }
