@@ -10,9 +10,9 @@ export default function Usuario() {
             <Header/>
             <div className="container fluid">
                 <h1 className="text-dark">Usúarios</h1>
-                <ListaUsuarios />
+                 <ListaUsuarios />
             </div>
         </>
 
-    )
+    ) 
 }

@@ -8,7 +8,7 @@ export default function Post() {
         <>
             <Header/>
             <div className="container fluid">
-                <h1 className="text-dark">Postagens</h1>
+                 <h1 className="text-dark">Postagens</h1>  
                 <ListaPosts />
             </div>
         </>

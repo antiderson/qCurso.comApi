@@ -5,7 +5,7 @@ import './style.css'
 export default function Header() {
     return (
         <header className="text-white d-flex">
-            <div className="container d-flex justify-content-between align-items-center ">
+              <div className="container d-flex justify-content-between align-items-center ">
                 <img className="col-md-3 " src={logo} alt="logo" />
 
                 <nav className="col-md-3 ">
