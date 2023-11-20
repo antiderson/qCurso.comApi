@@ -24,8 +24,8 @@ const router = createBrowserRouter([
     element: <Post />,
   }
 
-    // errorElement: <Error />     **criar tela de erro
-    // action: () => <Home />,
+  // errorElement: <Error />     **criar tela de erro
+  // action: () => <Home />,
 
 ])
 
