@@ -1,0 +1,16 @@
+.content {
+    height: 100vh;
+    background-image: url(../../assets/bannerInit.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.loginbutton{
+    background-color: #3636CD;
+    border: 1px solid #ffff;
+    border-radius: 20px;
+    padding: 8px 28px;
+    font-size: 12px;
+    color: #ffff;
+    
+}

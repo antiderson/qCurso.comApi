@@ -1,83 +1,38 @@
-import { useState } from "react";
-import ListaUsuarios from "./ListaUsuarios";
-import { UsuarioClient } from "../../Client/Usuario.client";
-import { Genero } from "../../Model/enum/Genero";
-import { Usuario } from "../../Model/Usuario.model";
-import Header from "../../Components/Header/header";
+import "./styles.css"
+import logo from "../../assets/logoTrans.png"
+
 
 export default function Home() {
-
-    const [formData, setFormData] = useState({
-        id: 0,
-        cadastro: new Date(),
-        atualizado: new Date(),
-        ativo: true,
-        nome: '',
-        senha: '',
-        email: '',
-        login: '',
-        redeSocial: '',
-        portifolio: '',
-        genero: Genero.MASCULINO,
-        dataNascimento: new Date(),
-    });
-
-    // const newValue = name === 'dataNascimento' ? new Date(value) : value;
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = e.target;
-
-        // Se for dataNascimento, mantenha como string
-        setFormData((prevData) => ({
-            ...prevData,
-            [name]: value,
-        }));
-    };
-
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-
-        try {
-            const usuarioClient = new UsuarioClient();
-
-            const dataNascimentoFormatada = formData.dataNascimento.toISOString().split('t')[0];
-            // Remova a conversão para Date aqui
-            const novoUsuario: Usuario = {
-                ...formData,
-            };
-
-            await usuarioClient.cadastrar(novoUsuario);
-
-            // Atualizar a lista de usuários chamando a função passada como propriedade
-            // onUpdateUsers();
-        } catch (error) {
-            console.error("Erro ao cadastrar novo usuario:", error);
-        }
-    };
-
     return (
-        <Header />
-        // <div>
-        //     <h1 style={{ color: 'red' }}>Qcurso.com</h1>
-        //     <div>
-        //         <form style={{ display: "flex", flexDirection: "column", width: '50%' }}>
-        //             <input type="text" name="nome" value={formData.nome} onChange={handleInputChange} placeholder="nome" />
-        //             <input type="password" name="senha" value={formData.senha} onChange={handleInputChange} placeholder="senha" />
-        //             <input type="email" name="email" value={formData.email} onChange={handleInputChange} placeholder="email" />
-        //             {/* <input
-        //                 type="date"
-        //                 name="dataNascimento"
-        //                 value={formData.dataNascimento}
-        //                 onChange={handleInputChange}
-        //                 placeholder="data de nascimento"
-        //             /> */}
-        //             <input type="text" name="genero" value={formData.genero} onChange={handleInputChange} placeholder="gênero" />
-        //             <input type="text" name="login" value={formData.login} onChange={handleInputChange} placeholder="login" />
-        //             <input type="text" name="portifolio" value={formData.portifolio} onChange={handleInputChange} placeholder="portifolio" />
-        //             <input type="text" name="rede social" value={formData.redeSocial} onChange={handleInputChange}  placeholder="rede social" />
-        //             <button type="submit">Cadastrar</button>
-        //         </form>
-        //     </div>
-        //     <ListaUsuarios />
-        // </div>
+        <>
+            <div className="content">
+                <div className="container">
+                    <nav className="d-flex justify-content-between align-items-center pt-3">
+                        <img src={logo} alt="" />
+                        <ul className="nav justify-content-center">
+                            <a className="nav-link text-white" href="#">Inicio</a>
+                            <a className="nav-link text-white" href="#">Docs</a>
+                            <a className="nav-link text-white" href="#">Fórum</a>
+                            <a className="nav-link text-white" href="#">Blog</a>
+                        </ul>
+                        <button className="button loginbutton">LOGIN</button>
+                    </nav>
+                    <div className="d-flex justify-content-center" style={{ paddingTop: "10%" }}>
+                        <div className="text-center ">
+                            <h1 className="text-white d-flex">Como podemos te ajudar ?</h1>
+                            <p className="text-white">Digite palavras chave sobre temas que deseja pesquisar</p>
+                            <div className="input-group text-center" style={{ paddingTop: "8%" }}>
+                                <span className="input-group-text">🔍</span>
+                                <input type="text" className="form-control" placeholder="Buscar" aria-label="Username" aria-describedby="basic-addon1" />
+                            </div>
+                            <div>
+                                <h6 className="text-white">Pesquisas sugeridas:</h6>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </>
     )
 }
