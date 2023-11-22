@@ -5,12 +5,51 @@
     background-repeat: no-repeat;
 }
 
-.loginbutton{
+.loginbutton {
     background-color: #3636CD;
     border: 1px solid #ffff;
     border-radius: 20px;
     padding: 8px 28px;
     font-size: 12px;
     color: #ffff;
+}
+
+.layout {
+    width: max-content;
+    height: 100%;
+    display: flex;
+    background-color: #fff;
+    justify-content: center;
+    display: grid;
     
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    /* gap: 8px; */
+    margin: auto;
+    border-radius: 10px;
+}
+.itemTable{
+    border: 1px solid #bababa;
+    padding-top: 40px;
+    height: 127px;
+    width: 390px;   
+    display: flex;
+    flex-direction: row;
+}
+
+.itemTable img{
+
+    height: 50px;
+    width: 50px;       
+}
+
+.iconL{
+    margin-inline: 40px;
+}
+
+.containerSeg{
+    height: 100vh;
+        background-image: url(../../assets/fundoSeg.png);
+        background-size:contain ;
+        background-repeat: no-repeat;
 }

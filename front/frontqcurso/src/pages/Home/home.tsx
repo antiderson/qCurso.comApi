@@ -1,5 +1,14 @@
 import "./styles.css"
 import logo from "../../assets/logoTrans.png"
+import reactLogo from "../../assets/react-logo.svg"
+import htmlLogo from "../../assets/html-logo.svg"
+import vueLogo from "../../assets/vue-logo.svg"
+import angularLogo from "../../assets/angular-logo.svg"
+import javascriptLogo from "../../assets/javascript-logo.svg"
+import typeScriptLogo from "../../assets/type-logo.svg"
+import bancoLogo from "../../assets/db-logo.svg"
+import javaLogo from "../../assets/java-logo.svg"
+import outroLogo from "../../assets/outro-logo.svg"
 
 
 export default function Home() {
@@ -29,7 +38,94 @@ export default function Home() {
                                 <h6 className="text-white">Pesquisas sugeridas:</h6>
                             </div>
                         </div>
-
+                    </div>
+                    <div style={{ paddingTop: "8%", marginBottom:"5%" }}>
+                        <section className="layout" >
+                            <div className="itemTable">
+                                <div className="iconL">
+                                    <img src={reactLogo} alt="" />
+                                </div>
+                                <div>
+                                    <h6 className="text-Dark">React.js</h6>
+                                    <p>245 Posts</p>
+                                </div>
+                            </div>
+                            <div className="itemTable">
+                                <div className="iconL">
+                                    <img src={htmlLogo} alt="" />
+                                </div>
+                                <div>
+                                    <h6 className="text-Dark">HTML/CSS</h6>
+                                    <p>245 Posts</p>
+                                </div>
+                            </div>
+                            <div className="itemTable">
+                                <div className="iconL">
+                                    <img src={vueLogo} alt="" />
+                                </div>
+                                <div>
+                                    <h6 className="text-Dark">Vue.js</h6>
+                                    <p>245 Posts</p>
+                                </div>
+                            </div>
+                            <div className="itemTable">
+                                <div className="iconL">
+                                    <img src={angularLogo} alt="" />
+                                </div>
+                                <div>
+                                    <h6 className="text-Dark">Angular</h6>
+                                    <p>245 Posts</p>
+                                </div>
+                            </div>
+                            <div className="itemTable">
+                                <div className="iconL">
+                                    <img src={javascriptLogo} alt="" />
+                                </div>
+                                <div>
+                                    <h6 className="text-Dark">JavaScript</h6>
+                                    <p>245 Posts</p>
+                                </div>
+                            </div>
+                            <div className="itemTable">
+                                <div className="iconL">
+                                    <img src={typeScriptLogo} alt="" />
+                                </div>
+                                <div>
+                                    <h6 className="text-Dark">TypeScript</h6>
+                                    <p>245 Posts</p>
+                                </div>
+                            </div>
+                            <div className="itemTable">
+                                <div className="iconL">
+                                    <img src={bancoLogo} alt="" />
+                                </div>
+                                <div>
+                                    <h6 className="text-Dark">Banco de Dados</h6>
+                                    <p>245 Posts</p>
+                                </div>
+                            </div>
+                            <div className="itemTable">
+                                <div className="iconL">
+                                    <img src={javaLogo} alt="" />
+                                </div>
+                                <div>
+                                    <h6 className="text-Dark">Java</h6>
+                                    <p>245 Posts</p>
+                                </div>
+                            </div>
+                            <div className="itemTable">
+                                <div className="iconL">
+                                    <img src={outroLogo} alt="" />
+                                </div>
+                                <div>
+                                    <h6 className="text-Dark">Outro</h6>
+                                    <p>245 Posts</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div className="containerSeg">
+                        <h1 className="text-center" >Tópicos recomendados</h1>
                     </div>
                 </div>
             </div>
