@@ -30,7 +30,7 @@ export default function Home() {
                         <ul className="nav justify-content-center">
                             <a className="nav-link text-white" href="#">Inicio</a>
                             <a className="nav-link text-white" href="#">Docs</a>
-                            <a className="nav-link text-white" href="#">Fórum</a>
+                            <a className="nav-link text-white" href="forum">Fórum</a>
                             <a className="nav-link text-white" href="#">Blog</a>
                         </ul>
                         <button className="button loginbutton">LOGIN</button>
