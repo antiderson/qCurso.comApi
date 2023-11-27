@@ -1,0 +1,6 @@
+.imagem-no-fim {
+    position: fixed;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+  

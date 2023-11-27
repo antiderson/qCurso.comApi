@@ -1,0 +1,22 @@
+.content2 {
+    height: 100vh;
+    background-image: url(../../assets/BannerForum.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.loginbutton {
+    background-color: #3636CD;
+    border: 1px solid #ffff;
+    border-radius: 20px;
+    padding: 8px 28px;
+    font-size: 12px;
+    color: #ffff;
+}
+
+.minifooter {
+    height: 100vh;
+    background-image: url(../../assets/mini.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}

@@ -9,6 +9,8 @@ import typeScriptLogo from "../../assets/type-logo.svg"
 import bancoLogo from "../../assets/db-logo.svg"
 import javaLogo from "../../assets/java-logo.svg"
 import outroLogo from "../../assets/outro-logo.svg"
+import Footer from "../../assets/Footer.svg"
+
 
 
 export default function Home() {
@@ -21,7 +23,7 @@ export default function Home() {
                         <ul className="nav justify-content-center">
                             <a className="nav-link text-white" href="#">Inicio</a>
                             <a className="nav-link text-white" href="#">Docs</a>
-                            <a className="nav-link text-white" href="#">Fórum</a>
+                            <a className="nav-link text-white" href="forum">Fórum</a>
                             <a className="nav-link text-white" href="#">Blog</a>
                         </ul>
                         <button className="button loginbutton">LOGIN</button>
@@ -127,6 +129,9 @@ export default function Home() {
                     <div className="containerSeg">
                         <h1 className="text-center" >Tópicos recomendados</h1>
                     </div>
+                </div>
+                <div className="imagem-no-fim">
+                        <img src={Footer} alt="Imagem Exemplo" />
                 </div>
             </div>
         </>
