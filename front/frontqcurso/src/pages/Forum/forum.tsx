@@ -1,6 +1,6 @@
 import "../Forum/styles.css"
 import logo from "../../assets/logo_Black.svg"
-import Footer from "../../assets/Footer.svg"
+import Footer from "../../assets/Footer.png"
 
 
 export default function Forum(){

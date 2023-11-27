@@ -9,7 +9,7 @@ import typeScriptLogo from "../../assets/type-logo.svg"
 import bancoLogo from "../../assets/db-logo.svg"
 import javaLogo from "../../assets/java-logo.svg"
 import outroLogo from "../../assets/outro-logo.svg"
-import Footer from "../../assets/Footer.svg"
+import Footer from "../../assets/Footer.png"
 
 
 

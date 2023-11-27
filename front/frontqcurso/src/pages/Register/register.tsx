@@ -1,6 +1,6 @@
 import "./styles.css"
 import logo from "../../assets/logoTrans.png"
-import Footer from "../../assets/Footer.svg"
+import Footer from "../../assets/Footer.png"
 
 export default function Register() {
     return (
