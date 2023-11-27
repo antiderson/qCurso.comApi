@@ -27,10 +27,10 @@ export default function Forum(){
                         </div>
                     </div>
                 </div>
-                <div className="imagem-no-fim">
+            </div>
+            <div className="imagem-no-fim">
                         <img src={Footer} alt="Imagem Exemplo" />
                 </div>
-            </div>
         </>
     )
 }

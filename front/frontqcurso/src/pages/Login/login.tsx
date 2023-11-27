@@ -21,52 +21,52 @@ export default function Home() {
                 <div className="container mt-5">
                     <div className="row justify-content-center">
                         <div className="col-md-6">
-                        <div className="card">
-                            <div className="card-body">
-                            <form>
-                                <div className="mb-3">
-                                <label htmlFor="email" className="form-label">
-                                    Email
-                                </label>
-                                <input
-                                    type="email"
-                                    className="form-control"
-                                    id="email"
-                                    />
+                            <div className="card">
+                                <div className="card-body">
+                                    <form>
+                                        <div className="mb-3">
+                                            <label htmlFor="email" className="form-label">
+                                                Email
+                                            </label>
+                                            <input
+                                                type="email"
+                                                className="form-control"
+                                                id="email"
+                                            />
+                                        </div>
+                                        <div className="mb-3">
+                                            <label htmlFor="password" className="form-label">
+                                                Senha
+                                            </label>
+                                            <input
+                                                type="password"
+                                                className="form-control"
+                                                id="password"
+                                            />
+                                        </div>
+                                        <div className="d-grid gap-2">
+                                            <button
+                                                type="button"
+                                                className="btn btn-primary"
+                                            >
+                                                Entrar
+                                            </button>
+                                        </div>
+                                    </form>
+                                    <div className="text-center mt-3">
+                                        <p>
+                                            Ainda não tem uma conta?{' '}
+                                            <a className="nav-link text-black" href="register">Cadastrar</a>
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className="mb-3">
-                                <label htmlFor="password" className="form-label">
-                                    Senha
-                                </label>
-                                <input
-                                    type="password"
-                                    className="form-control"
-                                    id="password"
-                                />
-                                </div>
-                                <div className="d-grid gap-2">
-                                <button
-                                    type="button"
-                                    className="btn btn-primary"
-                                    >
-                                    Entrar
-                                </button>
-                                </div>
-                            </form>
-                            <div className="text-center mt-3">
-                                <p>
-                                Ainda não tem uma conta?{' '}
-                                <a className="nav-link text-black" href="register">Cadastrar</a>
-                                </p>
-                            </div>
-                            </div>
-                            <div className="imagem-no-fim">
-                                <img src={Footer} alt="Imagem Exemplo" />
                             </div>
                         </div>
-                        </div>
                     </div>
-                    </div>
+                </div>
+                <footer >
+                    <img className="imagem-no-fim" src={Footer} alt="Imagem Exemplo" />
+                </footer>
             </div>
         </>
     )

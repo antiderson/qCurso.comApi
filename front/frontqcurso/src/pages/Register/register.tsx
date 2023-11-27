@@ -17,74 +17,75 @@ export default function Register() {
                         </ul>
                     </nav>
                 </div>
-            <div className="container mt-5">
-                <div className="row justify-content-center">
-                    <div className="col-md-6">
-                    <div className="card">
-                        <div className="card-body">
-                        <h2 className="text-center">Cadastro</h2>
-                        <form>
-                            <div className="mb-1">
-                            <label htmlFor="email" className="form-label">
-                                Email
-                            </label>
-                            <input
-                                type="email"
-                                className="form-control"
-                                id="email"/>
-                            </div>
-                            <div className="mb-1">
-                            <label htmlFor="nome" className="form-label">
-                                Nome
-                            </label>
-                            <input
-                                type="name"
-                                className="form-control"
-                                id="nome"/>
-                            </div>
-                            <div className="mb-1">
-                            <label htmlFor="password" className="form-label">
-                                Senha
-                            </label>
-                            <input
-                                type="password"
-                                className="form-control"
-                                id="password"/>
-                            </div>
-                            <div className="mb-1">
-                            <label htmlFor="confpassword" className="form-label">
-                                Confirmar Senha
-                            </label>
-                            <input
-                                type="confpassword"
-                                className="form-control"
-                                id="confpassword"/>
-                            </div>
-                            <div className="d-grid gap-2">
+                <div className="container mt-5">
+                    <div className="row justify-content-center">
+                        <div className="col-md-6">
+                            <div className="card">
+                                <div className="card-body">
+                                    <form>
+                                        <div className="mb-1">
+                                            <label htmlFor="email" className="form-label">
+                                                Email
+                                            </label>
+                                            <input
+                                                type="email"
+                                                className="form-control"
+                                                id="email" />
+                                        </div>
+                                        <div className="mb-1">
+                                            <label htmlFor="nome" className="form-label">
+                                                Nome
+                                            </label>
+                                            <input
+                                                type="name"
+                                                className="form-control"
+                                                id="nome" />
+                                        </div>
+                                        <div className="mb-1">
+                                            <label htmlFor="password" className="form-label">
+                                                Senha
+                                            </label>
+                                            <input
+                                                type="password"
+                                                className="form-control"
+                                                id="password" />
+                                        </div>
+                                        <div className="mb-1">
+                                            <label htmlFor="confpassword" className="form-label">
+                                                Confirmar Senha
+                                            </label>
+                                            <input
+                                                type="confpassword"
+                                                className="form-control"
+                                                id="confpassword" />
+                                        </div>
+                                        <div className="d-grid gap-2">
 
-                            <button
-                                type="button"
-                                className="btn btn-primary">
-                                Cadastrar
-                            </button>
+                                            <button
+                                                type="button"
+                                                className="btn btn-primary">
+                                                Cadastrar
+                                            </button>
+                                        </div>
+                                    </form>
+                                    <div className="text-center mt-3">
+                                        <p>
+                                            Já tem uma conta?{' '}
+                                            <a className="nav-link text-black" href="login">Logar</a>
+                                        </p>
+                                    </div>
+
+                                </div>
                             </div>
-                        </form>
-                        <div className="text-center mt-3">
-                            <p>
-                            Já tem uma conta?{' '}
-                            <a className="nav-link text-black" href="login">Logar</a>
-                            </p>
+
                         </div>
-                        
-                    </div>
-                    <div className="imagem-no-fim">
-                        <img src={Footer} alt="Imagem Exemplo" />
                     </div>
                 </div>
-                </div>
+                <footer >
+                    <img className="footerregister" src={Footer} alt="Imagem Exemplo" />
+                </footer>
             </div>
-            </div>
-        </div>
         </>
+
     )
 }

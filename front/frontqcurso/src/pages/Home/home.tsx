@@ -9,8 +9,6 @@ import typeScriptLogo from "../../assets/type-logo.svg"
 import bancoLogo from "../../assets/db-logo.svg"
 import javaLogo from "../../assets/java-logo.svg"
 import outroLogo from "../../assets/outro-logo.svg"
-import Footer from "../../assets/Footer.png"
-
 
 
 export default function Home() {
@@ -129,9 +127,6 @@ export default function Home() {
                     <div className="containerSeg">
                         <h1 className="text-center" >Tópicos recomendados</h1>
                     </div>
-                </div>
-                <div className="imagem-no-fim">
-                        <img src={Footer} alt="Imagem Exemplo" />
                 </div>
             </div>
         </>
