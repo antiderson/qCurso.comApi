@@ -20,3 +20,14 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+.forumPost{
+    margin: auto;
+    padding-top: 8%;
+    width: 60%;
+}
+
+.footerForum{
+    width: 60%;
+    padding-top: 5%;
+}

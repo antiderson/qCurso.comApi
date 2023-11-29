@@ -1,6 +1,7 @@
 import "./styles.css"
 import logo from "../../assets/logoTrans.png"
 import Footer from "../../assets/Footer.png"
+import { Link } from "react-router-dom"
 
 
 export default function Home() {
@@ -11,9 +12,9 @@ export default function Home() {
                     <nav className="d-flex justify-content-between align-items-center pt-3">
                         <img src={logo} alt="" />
                         <ul className="nav justify-content-center">
-                            <a className="nav-link text-white" href="#">Inicio</a>
+                            <a className="nav-link text-white" href="#"><Link to={`/`} className="text-white">Inico</Link></a>
                             <a className="nav-link text-white" href="#">Docs</a>
-                            <a className="nav-link text-white" href="forum">Fórum</a>
+                            <a className="nav-link text-white" href="forum"><Link to={`/forum`} className="text-white">Fórum</Link></a>
                             <a className="nav-link text-white" href="#">Blog</a>
                         </ul>
                     </nav>
@@ -56,7 +57,7 @@ export default function Home() {
                                     <div className="text-center mt-3">
                                         <p>
                                             Ainda não tem uma conta?{' '}
-                                            <a className="nav-link text-black" href="register">Cadastrar</a>
+                                            <a className="nav-link text-black" href="register"><Link to={`/register`} className="text-dark">Registrar</Link></a>
                                         </p>
                                     </div>
                                 </div>

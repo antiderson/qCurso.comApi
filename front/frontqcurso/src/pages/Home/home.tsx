@@ -18,6 +18,7 @@ import ideia from "../../assets/ideia.png"
 import duvida from "../../assets/duvida.png"
 import colabore from "../../assets/colabore.png"
 import footer from "../../assets/rodape.png"
+import { Link } from "react-router-dom"
 
 
 export default function Home() {
@@ -28,12 +29,12 @@ export default function Home() {
                     <nav className="d-flex justify-content-between align-items-center pt-3">
                         <img src={logo} alt="" />
                         <ul className="nav justify-content-center">
-                            <a className="nav-link text-white" href="#">Inicio</a>
+                            <a className="nav-link text-white" href="#"><Link to={`/`} className="text-white">Inicio</Link></a>
                             <a className="nav-link text-white" href="#">Docs</a>
-                            <a className="nav-link text-white" href="forum">Fórum</a>
+                            <a className="nav-link text-white" href="forum"><Link to={`/forum`} className="text-white">Fórum</Link></a>
                             <a className="nav-link text-white" href="#">Blog</a>
                         </ul>
-                        <button className="button loginbutton">LOGIN</button>
+                        <button className="button loginbutton"><Link to={`/login`} className="text-white">Login</Link></button>
                     </nav>
                     <div className="d-flex justify-content-center" style={{ paddingTop: "10%" }}>
                         <div className="text-center ">
