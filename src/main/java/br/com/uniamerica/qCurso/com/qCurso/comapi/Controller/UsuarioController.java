@@ -45,7 +45,7 @@ public class UsuarioController {
 			@RequestBody Usuario usuario
 	){
 		try{
-			this.usuarioService.atualizarGeral(id,usuario);
+			this.usuarioService.atualizar(id,usuario);
 		}catch (Exception e){
 			return ResponseEntity.badRequest().body(e.getMessage());
 		}
@@ -57,7 +57,7 @@ public class UsuarioController {
 			@PathVariable final Long id
 	){
 		try {
-			this.usuarioService.deletarGeral(id);
+			this.usuarioService.excluir(id);
 		}catch (Exception e){
 			return ResponseEntity.badRequest().body(e.getMessage());
 		}

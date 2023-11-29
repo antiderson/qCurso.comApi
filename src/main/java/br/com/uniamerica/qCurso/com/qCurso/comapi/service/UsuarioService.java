@@ -28,16 +28,16 @@ public class UsuarioService {
 	}
 
 	@Transactional
-	public void atualizarGeral(final Long id,final Usuario usuario) {
-		if (id.equals(usuario.getId()) && !this.usuarioRepository.findById(id).isEmpty()) {
+	public void atualizar(final Long id, final Usuario usuario){
+		if(id.equals(usuario.getId()) && !this.usuarioRepository.findById(id).isEmpty()){
 			this.usuarioRepository.save(usuario);
-		} else {
+		}else{
 			throw new RuntimeException("Id não encontrado");
 		}
 	}
 
 	@Transactional
-	public void deletarGeral(final Long id){
+	public void excluir(final Long id){
 		if (!this.usuarioRepository.findById(id).isEmpty()){
 			this.usuarioRepository.deleteById(id);
 		}else{
