@@ -21,6 +21,10 @@ public class Post extends AbstractEntity {
     private Usuario usuario;
 
     @Getter @Setter
+    @Column(name = "titulo", nullable = false, length = 80)
+    private String titulo;
+
+    @Getter @Setter
     @Column(name = "descricao", nullable = false, length = 255)
     private String descricao;
 
