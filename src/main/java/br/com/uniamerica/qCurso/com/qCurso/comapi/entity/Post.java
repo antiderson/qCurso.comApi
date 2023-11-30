@@ -21,7 +21,7 @@ public class Post extends AbstractEntity {
     private Usuario usuario;
 
     @Getter @Setter
-    @Column(name = "titulo", nullable = false, length = 80)
+    @Column(name = "titulo", nullable = false, length = 100)
     private String titulo;
 
     @Getter @Setter
@@ -32,11 +32,6 @@ public class Post extends AbstractEntity {
     @Enumerated(EnumType.STRING)
     @Column(name = "categoria", nullable = false)
     private Categoria categoria;
-
-    @Getter @Setter
-    @Enumerated(EnumType.STRING)
-    @Column(name = "statusPost", nullable = false)
-    private StatusPost statusPost;
 
     @Getter @Setter
     @Enumerated(EnumType.STRING)

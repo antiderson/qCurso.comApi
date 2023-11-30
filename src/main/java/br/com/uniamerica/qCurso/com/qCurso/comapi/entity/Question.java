@@ -1,36 +1,38 @@
 package br.com.uniamerica.qCurso.com.qCurso.comapi.entity;
 
-@javax.persistence.Entity
-@javax.persistence.Table(name = "tb_question", schema = "qcurso")
-@lombok.NoArgsConstructor
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.NoArgsConstructor;
+import javax.persistence.*;
+
+@NoArgsConstructor
+@Entity
+@Table(name = "tb_question", schema = "qcurso")
 public class Question extends AbstractEntity {
 
-    @lombok.Getter @lombok.Setter
-    @javax.persistence.JoinColumn(name = "id_usuario")
-    @javax.persistence.ManyToOne
-    @com.fasterxml.jackson.annotation.JsonBackReference
+    @Getter @Setter
+    @JoinColumn(name = "id_usuario")
+    @ManyToOne
+    @JsonBackReference
     private Usuario usuario;
 
-    @lombok.Getter @lombok.Setter
-    @javax.persistence.Column(name = "titulo", nullable = false, length = 80)
+    @Getter @Setter
+    @Column(name = "titulo", nullable = false, length = 100)
     private String titulo;
 
-    @lombok.Getter @lombok.Setter
-    @javax.persistence.Column(name = "descricao", nullable = false, length = 255)
+    @Getter @Setter
+    @Column(name = "descricao", nullable = false, length = 255)
     private String descricao;
 
-    @lombok.Getter @lombok.Setter
-    @javax.persistence.Enumerated(javax.persistence.EnumType.STRING)
-    @javax.persistence.Column(name = "categoria", nullable = false)
+    @Getter @Setter
+    @Enumerated(EnumType.STRING)
+    @Column(name = "categoria", nullable = false)
     private Categoria categoria;
 
-    @lombok.Getter @lombok.Setter
-    @javax.persistence.Enumerated(javax.persistence.EnumType.STRING)
-    @javax.persistence.Column(name = "statusPost", nullable = false)
+    @Getter @Setter
+    @Enumerated(EnumType.STRING)
+    @Column(name = "statusPost", nullable = false)
     private StatusPost statusPost;
 
-    @lombok.Getter @lombok.Setter
-    @javax.persistence.Enumerated(javax.persistence.EnumType.STRING)
-    @javax.persistence.Column(name = "tipo", nullable = false)
-    private Tipo tipo;
 }
