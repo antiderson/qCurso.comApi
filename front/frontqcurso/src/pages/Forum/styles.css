@@ -31,3 +31,16 @@
     width: 60%;
     padding-top: 5%;
 }
+
+.IconeLista{
+    width: 24px;
+}
+
+.ListaTopics{
+   padding-top: 8%;
+   margin-right: 10%;
+}
+
+.ListaComents{
+    padding-top: 35%;
+}

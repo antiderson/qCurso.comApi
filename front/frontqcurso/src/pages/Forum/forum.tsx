@@ -1,6 +1,7 @@
 import "../Forum/styles.css"
 import logo from "../../assets/logo_Black.svg"
 import Footer from "../../assets/rodape.png"
+import A1 from "../../assets/a1.svg"
 import forumpost from "../../assets/forumPost.png"
 import postHeader from "../../assets/postHeader.png"
 import infoheader from "../../assets/infoheader.png"
@@ -31,11 +32,107 @@ export default function Forum() {
                             </div>
                         </div>
                     </div>
-                    <div className=" row forumPost " >
-                        <img className=" row forumPostinfo " src={infoheader} alt="" />
-                        <img className=" row forumPostheader " src={postHeader} alt="" />
-                        <img className=" align-items-center" src={forumpost} alt="" />
-                        {/* <img className=" align-items-center" src={footerForum} alt="" /> */}
+                </div>
+                <div className="row">
+                    <div className="col text-center forumPost" >
+                        <h1>TEST 1</h1>
+                    </div>
+                    <div className="col-md-2 text-center ListaTopics">
+                        <h5>Fórums</h5>
+                        <ul className="list-group list-group-flush">
+                            <a href="">
+                                <li className="list-group-item d-flex justify-content-between align-items-left">
+                                    <img className="IconeLista" src={A1}></img>
+                                    Account Management
+                                    <span className="tag tag-pill">1</span>
+                                </li>
+                            </a>
+                            <a href="">
+                                <li className="list-group-item d-flex justify-content-between align-items-center">
+                                    <img className="IconeLista" src={A1}></img>
+                                    Aprimo Theme Support
+                                    <span className="tag tag-pill">2</span>
+                                </li>
+                            </a>
+                            <a href="">
+                                <li className="list-group-item d-flex justify-content-between align-items-center">
+                                    <img className="IconeLista" src={A1}></img>
+                                    Deksi Theme
+                                    <span className="tag tag-pill">3</span>
+                                </li>
+                            </a>
+                            <a href="">
+                                <li className="list-group-item d-flex justify-content-between align-items-center">
+                                    <img className="IconeLista" src={A1}></img>
+                                    Docly Theme Support
+                                    <span className="tag tag-pill">4</span>
+                                </li>
+                            </a>
+                            <a href="">
+                                <li className="list-group-item d-flex justify-content-between align-items-center">
+                                    <img className="IconeLista" src={A1}></img>
+                                    Gullu Theme Support
+                                    <span className="tag tag-pill">5</span>
+                                </li>
+                            </a>
+                            <a href="">
+                                <li className="list-group-item d-flex justify-content-between align-items-center">
+                                    <img className="IconeLista" src={A1}></img>
+                                    kbDoc Template Support
+                                    <span className="tag tag-pill">6</span>
+                                </li>
+                            </a>
+                            <a href="">
+                                <li className="list-group-item d-flex justify-content-between align-items-center">
+                                    <img className="IconeLista" src={A1}></img>
+                                    Product Support
+                                    <span className="tag tag-pill">7</span>
+                                </li>
+                            </a>
+                            <a href="">
+                                <li className="list-group-item d-flex justify-content-between align-items-center">
+                                    <img className="IconeLista" src={A1}></img>
+                                    Rogan Theme Support
+                                    <span className="tag tag-pill">8</span>
+                                </li>
+                            </a>
+                            <a href="">
+                                <li className="list-group-item d-flex justify-content-between align-items-center">
+                                    <img className="IconeLista" src={A1}></img>
+                                    User Feedback
+                                    <span className="tag tag-pill">9</span>
+                                </li>
+                            </a>
+                        </ul>
+                        <div className="ListaComents text-center">
+                            <div className="list-group">
+                            <h5>Topicos Recentes</h5>
+                                <a href="#" className="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div className="d-flex w-100 justify-content-between">
+                                        <h5 className="mb-1">TEST</h5>
+                                        <small>3 days ago</small>
+                                    </div>
+                                    <p className="mb-1">Yep.</p>
+                                    <small>Out of Here</small>
+                                </a>
+                                <a href="#" className="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div className="d-flex w-100 justify-content-between">
+                                        <h5 className="mb-1">TEST</h5>
+                                        <small className="text-muted">3 days ago</small>
+                                    </div>
+                                    <p className="mb-1">Yep.</p>
+                                    <small className="text-muted">Out of Here</small>
+                                </a>
+                                <a href="#" className="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div className="d-flex w-100 justify-content-between">
+                                        <h5 className="mb-1">TEST</h5>
+                                        <small className="text-muted">3 days ago</small>
+                                    </div>
+                                    <p className="mb-1">Yep.</p>
+                                    <small className="text-muted">Out of Here</small>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div >
