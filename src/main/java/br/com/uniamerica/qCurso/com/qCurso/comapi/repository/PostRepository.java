@@ -24,9 +24,6 @@ public interface PostRepository extends JpaRepository<Post, Long> {
     @Query("from Post where categoria = :categoria")
     public List<Post> findByCategoria(@Param("categoria") Categoria categoria);
 
-    @Query("from Post where statusPost = :statusPost")
-    public List<Post> findByStatusPost(@Param("statusPost") StatusPost statusPost);
-
     @Query("from Post where tipo = :tipo")
     public List<Post> findByTipo(@Param("tipo") Tipo tipo);
 }
