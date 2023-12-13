@@ -19,7 +19,7 @@ public interface QuestionRepository extends JpaRepository<Question, Long> {
     public List<Question> findByQuestionAtivos();
 
 
-    @Query("from Question where categoria = :categoria")
-    public List<Question> findByCategoria(@Param("categoria") Categoria categoria);
+    @Query("from Question where stack = :stack")
+    public List<Question> findByCategoria(@Param("stack") Stack stack);
 
 }
