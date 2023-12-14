@@ -35,7 +35,7 @@ public class PostController {
     @PostMapping
     public ResponseEntity<?> cadastrar(@RequestBody final Post post){
         this.postRepository.save(post);
-        return ResponseEntity.ok().body("Postagem cadastrado com sucesso");
+        return ResponseEntity.ok().body("Postagem cadastrada com sucesso!");
     }
 
     @PutMapping("/atualizarGeral/{id}")
@@ -44,11 +44,11 @@ public class PostController {
             @RequestBody Post post
     ){
         try{
-            this.postService.atualizarGeral(id,post);
+            this.postService.atualizar(id,post);
         }catch (Exception e){
             return ResponseEntity.badRequest().body(e.getMessage());
         }
-        return ResponseEntity.ok().body("Postagem atualizada com sucesso");
+        return ResponseEntity.ok().body("Postagem atualizada com sucesso!");
     }
 
     @DeleteMapping("/{id}")
@@ -56,10 +56,10 @@ public class PostController {
             @PathVariable final Long id
     ){
         try {
-            this.postService.deletarGeral(id);
+            this.postService.deletar(id);
         }catch (Exception e){
             return ResponseEntity.badRequest().body(e.getMessage());
         }
-        return ResponseEntity.ok().body("Postagem deletado com sucesso");
+        return ResponseEntity.ok().body("Postagem deletada com sucesso!");
     }
 }

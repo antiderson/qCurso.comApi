@@ -1,10 +1,12 @@
 package br.com.uniamerica.qCurso.com.qCurso.comapi.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
+import java.util.List;
 
 @NoArgsConstructor
 @Entity
@@ -27,12 +29,17 @@ public class Question extends AbstractEntity {
 
     @Getter @Setter
     @Enumerated(EnumType.STRING)
-    @Column(name = "categoria", nullable = false)
-    private Categoria categoria;
+    @Column(name = "stack", nullable = false)
+    private Stack stack;
 
     @Getter @Setter
     @Enumerated(EnumType.STRING)
     @Column(name = "statusPost", nullable = false)
     private StatusPost statusPost;
+
+    @Getter @Setter
+    @OneToMany(mappedBy = "question", cascade = CascadeType.REMOVE)
+    @JsonManagedReference
+    private List<QuestionComent> questionComents;
 
 }

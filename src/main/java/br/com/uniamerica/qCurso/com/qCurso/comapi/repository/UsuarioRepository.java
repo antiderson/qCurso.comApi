@@ -20,7 +20,7 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 	public List<Usuario> findByUsuariosAtivos();
 
 	@Query("from Usuario where nome = :nome")
-	public List<Usuario> findByNome(@Param("nome") String nome);
+	public List<Usuario> f3ndByNome(@Param("nome") String nome);
 
 	@Query("from Usuario where portifolio = :portifolio")
 	public List<Usuario> findByPortifolio(@Param("portifolio") String portifolio);

@@ -18,8 +18,9 @@ public interface QuestionRepository extends JpaRepository<Question, Long> {
     @Query("SELECT question FROM Question question WHERE question.ativo = true")
     public List<Question> findByQuestionAtivos();
 
-
     @Query("from Question where stack = :stack")
-    public List<Question> findByCategoria(@Param("stack") Stack stack);
+    public List<Question> findByStack(@Param("stack") Stack stack);
 
+    @Query("from Question where statusPost = :statusPost")
+    public List<Question> findByStatus(@Param("statusPost") StatusPost statusPost);
 }

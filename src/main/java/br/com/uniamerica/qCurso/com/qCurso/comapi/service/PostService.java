@@ -29,7 +29,7 @@ public class PostService {
     }
 
     @Transactional
-    public void atualizarGeral(final Long id,final Post post) {
+    public void atualizar(final Long id,final Post post) {
         if (id.equals(post.getId()) && !this.postRepository.findById(id).isEmpty()) {
             this.postRepository.save(post);
         } else {
@@ -38,7 +38,7 @@ public class PostService {
     }
 
     @Transactional
-    public void deletarGeral(final Long id){
+    public void deletar(final Long id){
         if (!this.postRepository.findById(id).isEmpty()){
             this.postRepository.deleteById(id);
         }else{

@@ -1,12 +1,14 @@
 package br.com.uniamerica.qCurso.com.qCurso.comapi.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.*;
+
 import javax.persistence.*;
-import com.fasterxml.jackson.annotation.*;
+
 @Entity
-@Table(name = "tb_postsComent", schema = "qcurso")
+@Table(name = "tb_questionComent", schema = "qcurso")
 @NoArgsConstructor
-public class PostComent extends AbstractEntity {
+public class QuestionComent extends AbstractEntity {
 
     @Getter @Setter
     @JoinColumn(name = "id_usuario")
@@ -19,8 +21,8 @@ public class PostComent extends AbstractEntity {
     private String descricao;
 
     @Getter @Setter
-    @JoinColumn(name = "id_post")
+    @JoinColumn(name = "id_question")
     @ManyToOne
     @JsonBackReference
-    private Post post;
+    private Question question;
 }
