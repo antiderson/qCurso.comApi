@@ -27,6 +27,8 @@ QCurso é uma plataforma educacional inovadora, centrada no conceito de pergunta
 
 - Adicionar mais integrações
 
+## Resumo Expandido
+https://docs.google.com/document/d/1iIKuHyVuDs9fAcaJUabm8ZZccuMf2qgRfQIZw0ESksM/edit?usp=sharing
 
 ## Stack utilizada
 
