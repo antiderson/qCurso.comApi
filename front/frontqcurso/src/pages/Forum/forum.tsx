@@ -1,10 +1,10 @@
 import "../Forum/styles.css"
 import logo from "../../assets/logo_Black.svg"
 import Footer from "../../assets/rodape.png"
-import forumpost from "../../assets/forumPost.png"
+// import forumpost from "../../assets/forumPost.png"
 import postHeader from "../../assets/postHeader.png"
 import infoheader from "../../assets/infoheader.png"
-import footerForum from "../../assets/forum-footer.png"
+// import footerForum from "../../assets/forum-footer.png"
 import { Link } from "react-router-dom"
 
 
@@ -34,7 +34,7 @@ export default function Forum() {
                     <div className=" row forumPost " >
                         <img className=" row forumPostinfo " src={infoheader} alt="" />
                         <img className=" row forumPostheader " src={postHeader} alt="" />
-                        <img className=" align-items-center" src={forumpost} alt="" />
+                        {/* <img className=" align-items-center" src={forumpost} alt="" /> */}
                         {/* <img className=" align-items-center" src={footerForum} alt="" /> */}
                     </div>
                 </div>
