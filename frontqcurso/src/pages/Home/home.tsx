@@ -20,13 +20,23 @@ import colabore from "../../assets/colabore.png"
 import footer from "../../assets/rodape.png"
 import { Link } from "react-router-dom"
 import Header from "../../Components/Header/header"
-import { Button } from "tamagui"
+import { Button, XStack, YStack } from "tamagui"
+import fundoHome from "../../assets/fundoHome.png"
+import SearchList from "../../Components/search&List/Search&List"
 
 
 export default function Home() {
     return (
         <>
-            <Header />
+        <YStack style={{
+            backgroundImage: `url(${fundoHome})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            height: '90vh'
+        }}>
+        <Header />
+        <SearchList/>
+        </YStack>
         </>
         // <>
         //     <div className="content">
