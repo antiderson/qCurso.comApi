@@ -1,6 +1,5 @@
 import "./styles.css"
 import logo from "../../assets/logoTrans.png"
-import Footer from "../../assets/Footer.png"
 import { Link } from "react-router-dom"
 
 
@@ -66,7 +65,6 @@ export default function Home() {
                     </div>
                 </div>
                 <footer >
-                    <img className="imagem-no-fim" src={Footer} alt="Imagem Exemplo" />
                 </footer>
             </div>
         </>

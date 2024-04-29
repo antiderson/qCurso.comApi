@@ -1,6 +1,5 @@
 import "./styles.css"
 import logo from "../../assets/logoTrans.png"
-import Footer from "../../assets/Footer.png"
 
 export default function Register() {
     return (
@@ -82,8 +81,7 @@ export default function Register() {
                     </div>
                 </div>
                 <footer >
-                    <img className="footerregister" src={Footer} alt="Imagem Exemplo" />
-                </footer>
+                 </footer>
             </div>
         </>
 

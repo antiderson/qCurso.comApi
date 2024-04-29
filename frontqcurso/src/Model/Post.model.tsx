@@ -1,5 +1,5 @@
 import { AbstractEntity } from "./AbstractEntity";
-import { Categoria } from "./enum/Categoria";
+import { Categoria } from "./enum/Stack";
 import { StatusPost } from "./enum/StatusPost";
 import { Tipo } from "./enum/Tipo";
 
