@@ -1,19 +1,16 @@
 import "./styles.css"
-import logo from "../../assets/logoTrans.png"
-import { Link } from "react-router-dom"
 
-
-export default function Home() {
+export default function Register() {
     return (
         <>
             <div className="content">
                 <div className="container">
                     <nav className="d-flex justify-content-between align-items-center pt-3">
-                        <img src={logo} alt="" />
+                    
                         <ul className="nav justify-content-center">
-                            <a className="nav-link text-white" href="#"><Link to={`/`} className="text-white">Inico</Link></a>
+                            <a className="nav-link text-white" href="#">Inicio</a>
                             <a className="nav-link text-white" href="#">Docs</a>
-                            <a className="nav-link text-white" href="forum"><Link to={`/forum`} className="text-white">Fórum</Link></a>
+                            <a className="nav-link text-white" href="forum">Fórum</a>
                             <a className="nav-link text-white" href="#">Blog</a>
                         </ul>
                     </nav>
@@ -24,49 +21,68 @@ export default function Home() {
                             <div className="card">
                                 <div className="card-body">
                                     <form>
-                                        <div className="mb-3">
+                                        <div className="mb-1">
                                             <label htmlFor="email" className="form-label">
                                                 Email
                                             </label>
                                             <input
                                                 type="email"
                                                 className="form-control"
-                                                id="email"
-                                            />
+                                                id="email" />
                                         </div>
-                                        <div className="mb-3">
+                                        <div className="mb-1">
+                                            <label htmlFor="nome" className="form-label">
+                                                Nome
+                                            </label>
+                                            <input
+                                                type="name"
+                                                className="form-control"
+                                                id="nome" />
+                                        </div>
+                                        <div className="mb-1">
                                             <label htmlFor="password" className="form-label">
                                                 Senha
                                             </label>
                                             <input
                                                 type="password"
                                                 className="form-control"
-                                                id="password"
-                                            />
+                                                id="password" />
+                                        </div>
+                                        <div className="mb-1">
+                                            <label htmlFor="confpassword" className="form-label">
+                                                Confirmar Senha
+                                            </label>
+                                            <input
+                                                type="confpassword"
+                                                className="form-control"
+                                                id="confpassword" />
                                         </div>
                                         <div className="d-grid gap-2">
+
                                             <button
                                                 type="button"
-                                                className="btn btn-primary"
-                                            >
-                                                Entrar
+                                                className="btn btn-primary">
+                                                Cadastrar
                                             </button>
                                         </div>
                                     </form>
                                     <div className="text-center mt-3">
                                         <p>
-                                            Ainda não tem uma conta?{' '}
-                                            <a className="nav-link text-black" href="register"><Link to={`/register`} className="text-dark">Registrar</Link></a>
+                                            Já tem uma conta?{' '}
+                                            <a className="nav-link text-black" href="login">Logar</a>
                                         </p>
                                     </div>
+
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
                 <footer >
-                </footer>
+                 </footer>
             </div>
         </>
+
     )
 }

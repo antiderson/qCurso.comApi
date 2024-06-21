@@ -8,6 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.*;
+
 @Controller
 @RequestMapping("/api/posts")
 public class PostController {
@@ -21,7 +23,7 @@ public class PostController {
 
     @GetMapping
     @CrossOrigin(origins = "http://127.0.0.1:5173")
-    public ResponseEntity<?> findAll() {
+    public ResponseEntity<List<Post>> findAll() {
         return ResponseEntity.ok().body(this.postRepository.findByPostsAtivos());
     }
 

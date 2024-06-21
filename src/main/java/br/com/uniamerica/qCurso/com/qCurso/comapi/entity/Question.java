@@ -34,8 +34,8 @@ public class Question extends AbstractEntity {
 
     @Getter @Setter
     @Enumerated(EnumType.STRING)
-    @Column(name = "statusPost", nullable = false)
-    private StatusPost statusPost;
+    @Column(name = "statusQuestion", nullable = false)
+    private StatusQuestion statusQuestion;
 
     @Getter @Setter
     @OneToMany(mappedBy = "question", cascade = CascadeType.REMOVE)

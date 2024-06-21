@@ -1,4 +1,4 @@
-export enum Tipo {
+export enum Categoria {
     QUESTIONATIVO,
     EXPLICATIVO
 }

@@ -1,7 +1,12 @@
 package br.com.uniamerica.qCurso.com.qCurso.comapi.entity;
 
-import com.fasterxml.jackson.annotation.*;
-import lombok.*;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -10,6 +15,7 @@ import java.util.List;
 @Entity
 @Table(name = "tb_usuario", schema = "qcurso")
 @NoArgsConstructor
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Usuario extends AbstractEntity {
 
 	@Getter @Setter
@@ -45,11 +51,6 @@ public class Usuario extends AbstractEntity {
 	@Enumerated(EnumType.STRING)
 	@Column(name = "genero", nullable = false)
 	private Genero genero;
-
-	@Getter @Setter
-	@Enumerated(EnumType.STRING)
-	@Column(name="moderador", nullable= false)
-	private Moderador moderador;
 
 	@Getter @Setter
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
