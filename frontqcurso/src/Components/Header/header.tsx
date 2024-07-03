@@ -16,7 +16,7 @@ export default function Header() {
                         <Link className={styles.ItemList} to={'/posts'}>Blog</Link>
                     </XStack>
                     <XStack w="30%" justifyContent="space-between" >
-                        <Button color="white" fontSize='$6' borderColor="#fff" borderRadius='$10' transparent={true} className={styles.login}>Login</Button>
+                        <Button color="white" fontSize='$6' borderColor="#fff" borderRadius='$10' transparent={true} className={styles.login}><Link to={'/login'}>Blog</Link></Button>
                         <Button>theme</Button>
                     </XStack>
                 </XStack>

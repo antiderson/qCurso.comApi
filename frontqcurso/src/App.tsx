@@ -32,12 +32,12 @@ export default function App() {
         },{
             path: "/forum",
             element: <Forum/>
+        },{
+            
         }
-
-        // errorElement: <Error />     **criar tela de erro
-        // action: () => <Home />,
+    //     errorElement: <Error />   
+    //    action: () => <Home />,
     ])
-
 
     return (
         <TamaguiProvider config={tamaguiConfig}>

@@ -1,71 +1,88 @@
-import "./styles.css"
+import { Button, H3, Input, Label, Checkbox, Stack, XStack, YStack } from "tamagui"
+import styles from "./index.module.css"
 import { Link } from "react-router-dom"
+import fundoAuth from '../../../assets/fundoAuth.jpg'
+import { useEffect, useState } from "react"
 
+const frases = [
+    " é mais que Blog!",
+    " é mais que educação!",
+    " é mais que um site!",
+    " é mais que um fórum!"
+];
 
-export default function Home() {
+const CardFrase: React.FC = () => {
+    const [atualFrase, setAtualFrase] = useState<string>(frases[0]);
+
+    useEffect(() => {
+        const Interval = setInterval(() => {
+            setAtualFrase(prevFrase => {
+                const index = frases.indexOf(prevFrase);
+                const proxFrase = (index + 1) % frases.length;
+                return frases[proxFrase];
+            });
+        }, 3000);
+
+        return () => clearInterval(Interval);
+    }, []);
+
     return (
-        <>
-            <div className="content">
-                <div className="container">
-                    <nav className="d-flex justify-content-between align-items-center pt-3">
-                        {/* <img src={logo} alt="" /> */}
-                        <ul className="nav justify-content-center">
-                            <a className="nav-link text-white" href="#"><Link to={`/`} className="text-white">Inico</Link></a>
-                            <a className="nav-link text-white" href="#">Docs</a>
-                            <a className="nav-link text-white" href="forum"><Link to={`/forum`} className="text-white">Fórum</Link></a>
-                            <a className="nav-link text-white" href="#">Blog</a>
-                        </ul>
-                    </nav>
-                </div>
-                <div className="container mt-5">
-                    <div className="row justify-content-center">
-                        <div className="col-md-6">
-                            <div className="card">
-                                <div className="card-body">
-                                    <form>
-                                        <div className="mb-3">
-                                            <label htmlFor="email" className="form-label">
-                                                Email
-                                            </label>
-                                            <input
-                                                type="email"
-                                                className="form-control"
-                                                id="email"
-                                            />
-                                        </div>
-                                        <div className="mb-3">
-                                            <label htmlFor="password" className="form-label">
-                                                Senha
-                                            </label>
-                                            <input
-                                                type="password"
-                                                className="form-control"
-                                                id="password"
-                                            />
-                                        </div>
-                                        <div className="d-grid gap-2">
-                                            <button
-                                                type="button"
-                                                className="btn btn-primary"
-                                            >
-                                                Entrar
-                                            </button>
-                                        </div>
-                                    </form>
-                                    <div className="text-center mt-3">
-                                        <p>
-                                            Ainda não tem uma conta?{' '}
-                                            <a className="nav-link text-black" href="register"><Link to={`/register`} className="text-dark">Registrar</Link></a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <footer >
-                </footer>
-            </div>
-        </>
+        <YStack bg="#fff" w="60%" h="40%" className={styles.card} align="center">
+            <p className={styles.frase}>
+                <span style={{ fontWeight: 'bold' }}>qCurso</span> {atualFrase}
+            </p>
+        </YStack>
+    )
+};
+
+export default function Login() {
+    return (
+        <XStack className={styles.container} style={{
+            backgroundImage: `url(${fundoAuth})`,
+            alignItems: "center"
+        }}>
+            <YStack className={styles.banner}>
+                <YStack style={{ alignItems: 'center'}} className={styles.fundo} h="96%">
+                    <CardFrase />
+                </YStack>
+                <p className={styles.teste}>Membro novo por aqui? <Link style={{ textDecoration: "underline", color: "inherit" }} to={"/register"}>Registrar</Link></p>
+            </YStack>
+            <YStack style={{
+                padding: "2rem",
+                backgroundColor: '#FFFFFF',
+                height: "70vh",
+                width: "60vh",
+                borderRadius: "0 20px 20px 0"
+            }} >
+                <Stack space="$5" padding="$4">
+                    <H3 size={1} fontSize="$7" fontFamily={"$body"} fontWeight="500">Login</H3>
+                    <YStack>
+                        <Label htmlFor="email" fontSize="$2">EMAIL OU NOME DE USUARIO</Label>
+                        <Input id="email" placeholder="Email ou Nome de usuario" style={{ borderRadius: "0px", backgroundColor: "white", border: 'none', borderBottom: '1px solid #E9E9E9' }} />
+                        <Label htmlFor="password" fontSize="$2">PASSWORD</Label>
+                        <Input id="password" placeholder="Password" type="password" style={{ borderRadius: "0px", backgroundColor: "white", border: 'none', borderBottom: '1px solid #E9E9E9' }} />
+                    </YStack>
+                    <XStack alignItems="center" space="$4">
+                        <Checkbox size="$3" />
+                        <Checkbox.Indicator>
+                            {/* <Check /> */}
+                        </Checkbox.Indicator>
+                        <Label>
+                            Manter conectado
+                        </Label>
+                    </XStack>
+                    <Button fontSize="$4" padding="$3" bg="#222" color="#fff" unstyled style={{ border: 'none', borderRadius: '10px' }} >Login</Button>
+                    <H3 fontSize="$2" textAlign="right">
+                        <a href="/forgot-password" style={{ textDecoration: "underline", color: "inherit" }}>Esqueceu a senha?</a>
+                    </H3>
+                    <H3 fontSize="$2" size={1} fontFamily={"$body"} textAlign="left">Conectar com:</H3>
+                    <XStack justifyContent="space-around">
+                        <Button>Google</Button>
+                        <Button>Facebook</Button>
+                        <Button>Twitter</Button>
+                    </XStack>
+                </Stack>
+            </YStack>
+        </XStack >
     )
 }

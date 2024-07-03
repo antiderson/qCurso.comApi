@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import '@fontsource/poppins'; // Importa a fonte Poppins
+
 
 import App from './App.tsx';
 
