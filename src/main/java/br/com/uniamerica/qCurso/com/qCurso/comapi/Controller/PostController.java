@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 
-@Controller
+@CrossOrigin(origins = "http://localhost:5173")
+@RestController
 @RequestMapping("/api/posts")
 public class PostController {
 
@@ -22,7 +23,7 @@ public class PostController {
 
 
     @GetMapping
-    @CrossOrigin(origins = "http://127.0.0.1:5173")
+    @CrossOrigin(origins = "http://localhost:5173")
     public ResponseEntity<List<Post>> findAll() {
         return ResponseEntity.ok().body(this.postRepository.findByPostsAtivos());
     }

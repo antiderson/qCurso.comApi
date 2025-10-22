@@ -6,8 +6,10 @@ import { Categoria } from "./enum/Categoria";
 export class Post extends AbstractEntity {
     stack?: Stack;
     descricao?: string;
+    // categoria?: Categoria;
+    categoria?: string;
+    tags?: string[];
     statusPost?: StatusPost;
-    categoria?: Categoria;
     id_usuario?: string;
     titulo?: string;
 }

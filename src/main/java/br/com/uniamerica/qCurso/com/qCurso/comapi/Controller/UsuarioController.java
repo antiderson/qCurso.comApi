@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RestController
-@CrossOrigin(origins = "http://127.0.0.1:5173")
+@CrossOrigin(origins = "http://localhost:5173")
 @RequestMapping("/api/usuarios")
 public class UsuarioController {
 
@@ -21,7 +21,7 @@ public class UsuarioController {
 	public UsuarioService usuarioService;
 
 	@GetMapping
-	@CrossOrigin(origins = "http://127.0.0.1:5173")
+	@CrossOrigin(origins = "http://localhost:5173")
 	public ResponseEntity<?> findAll() {
 		return ResponseEntity.ok().body(this.usuarioRepository.findByUsuariosAtivos());
 	}

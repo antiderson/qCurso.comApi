@@ -9,7 +9,7 @@ interface CardTechProps {
     link: string;
 }
 
-function clickToCard(link: string) {
+function  clickToCard(link: string) {
     window.open("/" + link, "_self");
 }
 

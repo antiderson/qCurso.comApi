@@ -20,7 +20,7 @@ public class QuestionController {
 
 
     @GetMapping
-    @CrossOrigin(origins = "http://127.0.0.1:5173")
+    @CrossOrigin(origins = "http://localhost:5173")
     public ResponseEntity<?> findAll() {
         return ResponseEntity.ok().body(this.questionRepository.findByQuestionAtivos());
     }

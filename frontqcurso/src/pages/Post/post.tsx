@@ -6,7 +6,7 @@ export default function Post() {
         <>
             <HeaderConte />
             <div className="container fluid">
-                <h1 className="text-dark">Postagens</h1>
+                {/* <h1 className="text-dark">Postagens</h1> */}
                 <PostComponent />
                 {/* chama tambe o footer */}
             </div>
