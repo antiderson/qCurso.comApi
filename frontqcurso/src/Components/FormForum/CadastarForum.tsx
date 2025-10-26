@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { UsuarioClient } from "../../Client/Usuario.client";
 import { QuestionClient } from "../../Client/Question.client"; // Importar o QuestionClient
 import { Stack } from "../../Model/enum/Stack";
-import { StatusQuestion } from "../../Model/enum/StatusQuestion";
+//import { StatusQuestion } from "../../Model/enum/StatusQuestion";
 
 export function CadastrarForum() {
     const [titulo, setTitulo] = useState("");

@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button, XStack, YStack } from "tamagui";
 // import LogoBranca from '../../assets/logoTrans.png';
  import LogoBranca from '../../assets/logo_Black.svg';
@@ -6,11 +6,10 @@ import bannerHeader from '../../assets/banner-header.png'
 import styles from './index.module.css';
 
 export default function HeaderConte() {
-    const navigate = useNavigate();
 
-    const createQuestion = () => {
-        navigate('/create-question');
-    }
+    //const createQuestion = () => {
+    //    navigate('/create-question');
+    //}
     return (
         <>
             <YStack 

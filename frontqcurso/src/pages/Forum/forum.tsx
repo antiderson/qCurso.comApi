@@ -1,4 +1,4 @@
-import { CadastrarForum } from "../../Components/FormForum/CadastarForum";
+//import { CadastrarForum } from "../../Components/FormForum/CadastarForum";
 import HeaderConte from "../../Components/HeaderConte/headerConte";
 import { ListaForum } from "../../Components/listForum/ListForum";
 

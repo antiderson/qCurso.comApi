@@ -27,7 +27,7 @@ const CardFrase: React.FC = () => {
     }, []);
 
     return (
-        <YStack bg="#fff" w="60%" h="40%" className={styles.card} align="center">
+        <YStack bg="#fff" w="60%" h="40%" className={styles.card} alignItems="center">
             <p className={styles.frase}>
                 <span style={{ fontWeight: 'bold' }}>qCurso</span> {atualFrase}
             </p>
