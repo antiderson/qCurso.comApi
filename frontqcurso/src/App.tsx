@@ -8,6 +8,7 @@ import Login from './pages/autenticacao/Login/login.tsx'
 import Register from './pages/autenticacao/Register/register.tsx'
 import Forum from './pages/Forum/forum.tsx'
 import { CreatePost } from './pages/createPost/CreatePost.tsx'
+import CriarForum from './pages/createQuestion/CreateForum.tsx'
 
 export default function App() {
     const router = createBrowserRouter([
@@ -38,6 +39,9 @@ export default function App() {
         },{
             path:"/createPost",
             element: <CreatePost />
+        },{
+            path:"/create-question",
+            element: <CriarForum />
         }
     //     errorElement: <Error />   
     //    action: () => <Home />,

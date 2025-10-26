@@ -1,12 +1,13 @@
 import { AbstractEntity } from "./AbstractEntity";
 import { Stack } from "./enum/Stack";
+import { StatusQuestion } from "./enum/StatusQuestion";
 
-export class Post extends AbstractEntity {
+export class Questions extends AbstractEntity {
     stack?: Stack;
     descricao?: string;
     // categoria?: Categoria;
     categoria?: string;
-    tags?: string[];
+    statusQuestion?: StatusQuestion;
     id_usuario?: string;
     titulo?: string;
 }
